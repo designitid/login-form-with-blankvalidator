@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <title>Spacer - Create Your Account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    \
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .fade-in {
+        animation: fadeIn 1s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .slide-in-left {
+        animation: slideInLeft 1s ease-in-out;
+      }
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .slide-in-right {
+        animation: slideInRight 1s ease-in-out;
+      }
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200 flex items-center justify-center min-h-screen">
+    <div
+      class="bg-white rounded-3xl shadow-lg flex flex-col md:flex-row w-full h-full max-w-none md:max-w-4xl md:h-auto fade-in"
+    >
+      <div
+        class="bg-gradient-to-b from-blue-500 to-blue-700 text-white p-8 md:w-1/2 rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none flex flex-col justify-center items-center slide-in-left"
+      >
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-rocket text-6xl"></i>
+          </div>
+          <h1 class="text-2xl font-bold mb-2">Halo User,</h1>
+          <h2 class="text-3xl font-bold mb-4">Selamat Datang!</h2>
+          <p class="text-sm">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Distinctio, laborum?
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="p-8 md:w-1/2 flex flex-col justify-center rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none slide-in-right"
+      >
+        <h2 class="text-2xl font-bold mb-6">Login Validator</h2>
+        <form onsubmit="return validateForm()">
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name"
+              >Nama</label
+            >
+            <input
+              class="shadow appearance-none border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="name"
+              type="text"
+              placeholder="Masukkan Nama"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+              >Alamat E-Mail</label
+            >
+            <input
+              class="shadow appearance-none border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="Masukkan Alamat E-Mail"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="password"
+              >Password</label
+            >
+            <input
+              class="shadow appearance-none border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              type="password"
+              placeholder="Masukkan Password"
+            />
+          </div>
+          <div class="mb-4">
+            <input type="checkbox" id="terms" class="mr-2 leading-tight" />
+            <label for="terms" class="text-sm text-gray-600"
+              >Saya Setuju Pada
+              <a href="#" class="text-blue-500">Peraturan dan Kondisi</a></label
+            >
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Daftar
+            </button>
+            <button
+              class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+              type="button"
+            >
+              Masuk
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
